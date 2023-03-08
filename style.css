@@ -13,7 +13,7 @@ header {
 }
 
 #slogan {
-    height: 500px;
+    height: 40vw;
     position: sticky;
     top: 0px;
     z-index: 1;
@@ -33,7 +33,7 @@ header {
     height: 100%;
     width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 4rem;
+    font-size: 5vw;
 }
 
 #slogan__gradient {
@@ -41,15 +41,16 @@ header {
     z-index: 2;
     transform: matrix(1, 0, 0, 1, 0, -540);
     mix-blend-mode: darken;
-    height: 500px;
+    width: 110%;
 }
 
 #slogan__gradient>img {
-    height: 100vw;
+    width: 100%;
+    object-fit: cover;
 }
 
 header>#nav__company>#nav__circle {
-    background: #eee;
+    background: #fff;
     border-radius: 50%;
     -webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
@@ -62,6 +63,17 @@ header>#nav__company>#nav__circle {
     float: left;
     margin-top: 0.5vw;
     margin-left: 3vw;
+}
+
+header>#nav {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 header>#nav__company>#nav__circle:hover {
@@ -103,49 +115,30 @@ header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name.vi
 }
 
 ul {
-    margin: 0px 0 0 40vw;
+    margin: 0px 0 0 45vw;
     padding: 2vw;
 }
 
 header>ul>li {
     display: inline-block;
-    padding: 1vw 2vw;
+    padding: 1vw 1.5vw;
     vertical-align: middle;
 }
 
 header>ul>li>a {
     text-decoration: none;
     color: rgb(0, 12, 26);
-    font-size: 1.8rem;
+    font-size: 1.7vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header>ul>li>a>.selecting {
     display: none;
     width: 1.8rem;
+    transform: translateY(3px);
 }
 
-header>ul>li>a#home:hover>.selecting {
-    display: revert;
-    margin-right: -1.8rem;
-}
-
-header>ul>li>a#contatti:hover>.selecting {
-    display: revert;
-    margin-right: -1.8rem;
-}
-
-header>ul>li>a#iNostriLavori:hover>.selecting {
-    display: revert;
-    margin-right: -1.8rem;
-}
-
-header>ul>li>a#About:hover>.selecting {
-    display: revert;
-    margin-right: -1.8rem;
-}
-
-header>ul>li>a#Collezioni:hover>.selecting {
+header>ul>li>a:hover>.selecting {
     display: revert;
     margin-right: -1.8rem;
 }
@@ -207,6 +200,10 @@ CARD
     height: 56vmin;
     object-fit: cover;
     object-position: 100% center;
+}
+
+#image-track>.image:hover {
+    transform: scale(1.25);
 }
 
 #image-track img {
