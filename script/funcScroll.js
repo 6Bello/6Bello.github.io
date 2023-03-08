@@ -13,15 +13,15 @@ function funcScroll() {
     }
   }
   var slogan__gradient = document.getElementById("slogan__gradient");
-  var slogan__text = document.getElementById("slogan");
-  var slogan__gradientTop = (-slogan__text.getBoundingClientRect().top - 540) / (1400 / window.innerWidth);
+  var slogan = document.getElementById("slogan");
+  var slogan__gradientTop = (-slogan.getBoundingClientRect().top - 540) / (1400 / window.innerWidth);
   var nav = document.getElementById("nav");
   var circle = document.getElementById("nav__circle");
   var name = document.getElementById("nav__circle__logo__name");
   slogan__gradient.style.transform = "matrix(1, 0, 0, 1, 0," + slogan__gradientTop + ")";
-  if (slogan__gradientTop > -1200) {
+  if (slogan__gradientTop > -1100) {
     if (slogan__gradientTop > -600) {
-      slogan__text.style.position = "relative";
+      slogan.style.position = "relative";
     }
     nav.classList.add("animated");
     nav.classList.add("slideInDown");
