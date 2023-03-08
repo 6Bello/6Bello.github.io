@@ -229,6 +229,87 @@ PARAGRAFI
     opacity: 1;
 }
 
+/*---------------------------------------------------
+FOOTER
+---------------------------------------------------*/
+footer {
+    background-image: url(footer.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-y: bottom;
+    max-height: 200px;
+    width: 100vw;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer>.logo_magazzino {
+    width: 50vw;
+    float: lef;
+    display: block;
+}
+
+footer>.logo_magazzino>img {
+    width: 300px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    position: absolute;
+}
+
+footer>.logo_magazzino>.magazzino {
+    margin: 135px 0 0 20px;
+}
+
+footer>.logo_magazzino>.designer {
+    font-style: italic;
+    font-weight: bold;
+    margin: 25px 0 100px 20px;
+}
+
+footer>.logo_magazzino>.designer>a {
+    font-weight: 100;
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+}
+
+footer>.informazioni {
+    float: right;
+    width: 50vw;
+    color: rgb(208, 208, 208);
+    margin: 60px 0 0 90px;
+
+}
+
+footer>.informazioni>* {
+    float: left;
+    margin-left: 5vw;
+}
+
+footer>.informazioni>*>h5 {
+    color: white;
+}
+
+footer>.informazioni>*>a {
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+}
+
+footer>.informazioni>*>a:hover {
+    text-decoration: underline;
+    color: rgb(206, 206, 206);
+}
+
+footer>.informazioni>.instagram>a {
+    display: flex;
+    width: 70px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+footer>.informazioni>.instagram>a>img {
+    width: 70px;
+}
+
 /*--------------------------------------------
 ANIM IN
 --------------------------------------------*/
