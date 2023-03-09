@@ -2,6 +2,8 @@ body {
     margin: 0px;
     background-color: rgb(0, 12, 26);
     overflow-X: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
 header {
@@ -211,6 +213,72 @@ CARD
     transition: transform 0.5s, filter 0.5s;
 }
 
+/*---------------------------------------------------
+BANNER
+---------------------------------------------------*/
+.banner {
+    margin: 0 150px;
+    width: auto;
+    height: 375px;
+    background: #fff;
+}
+
+.banner>*>.text {
+    float: left;
+    margin: 20px 50px;
+    color: #323232;
+    height: 80%;
+}
+
+.banner>*>.text>.button {
+    margin-top: 180px;
+}
+
+.banner>*>.text>.button>.next {
+    background: url(next.png) no-repeat center center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.banner>*>.text>.button>.back {
+    background: url(back.png) no-repeat center center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    margin-right: 100px;
+}
+
+.banner>*>img {
+    float: right;
+    margin: 0px 0px;
+    height: 100%;
+}
+
+.banner>#banner__first {
+    display: block;
+}
+
+#banner__second {
+    display: none;
+}
+
+#banner__third {
+    display: none;
+}
+
+.banner>#back {
+    float: left;
+}
+
 /*-------------------------------------
 PARAGRAFI
 -------------------------------------*/
@@ -245,19 +313,19 @@ footer {
 
 footer>.logo_magazzino {
     width: 50vw;
-    float: lef;
+    float: left;
     display: block;
 }
 
 footer>.logo_magazzino>img {
     width: 300px;
-    margin-top: 60px;
+    margin-top: 65px;
     margin-bottom: 0px;
     position: absolute;
 }
 
 footer>.logo_magazzino>.magazzino {
-    margin: 135px 0 0 20px;
+    margin: 140px 0 0 35px;
 }
 
 footer>.logo_magazzino>.designer {
@@ -299,11 +367,19 @@ footer>.informazioni>*>a:hover {
     color: rgb(206, 206, 206);
 }
 
+footer>.informazioni>.instagram {
+    float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+    margin-left: 5px;
+
+}
+
 footer>.informazioni>.instagram>a {
     display: flex;
     width: 70px;
-    margin-top: 20px;
-    margin-left: 40px;
+
+    float: right;
 }
 
 footer>.informazioni>.instagram>a>img {
