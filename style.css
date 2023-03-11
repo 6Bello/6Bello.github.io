@@ -136,13 +136,13 @@ header>ul>li>a {
 
 header>ul>li>a>.selecting {
     display: none;
-    width: 1.8rem;
+    width: 1.8vw;
     transform: translateY(3px);
 }
 
-header>ul>li>a:hover>.selecting {
+header>ul>li:hover>a>.selecting {
     display: revert;
-    margin-right: -1.8rem;
+    margin-right: -1.8vw;
 }
 
 /*----------------------------------------
@@ -225,16 +225,19 @@ BANNER
 
 .banner>*>.text {
     float: left;
-    margin: 20px 50px;
+    width: 30%;
     color: #323232;
     height: 80%;
+    text-align: center;
 }
 
-.banner>*>.text>.button {
-    margin-top: 180px;
+.banner>.button {
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 20px;
 }
 
-.banner>*>.text>.button>.next {
+.banner>.button>.next {
     background: url(next.png) no-repeat center center;
     background-size: cover;
     width: 50px;
@@ -245,7 +248,7 @@ BANNER
     border: none;
 }
 
-.banner>*>.text>.button>.back {
+.banner>.button>.back {
     background: url(back.png) no-repeat center center;
     background-size: cover;
     width: 50px;
@@ -254,20 +257,21 @@ BANNER
     background-position: center;
     background-repeat: no-repeat;
     border: none;
-    margin-right: 100px;
+    margin-right: 230px;
 }
 
 .banner>*>img {
     float: right;
     margin: 0px 0px;
     height: 100%;
+    width: 70%;
 }
 
-.banner>#banner__first {
+.banner>.banner__first {
     display: block;
 }
 
-#banner__second {
+.banner>.banner__different {
     display: none;
 }
 

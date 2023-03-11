@@ -66,34 +66,53 @@
             <img class="image" src="GARM_img/PHOTO-2023-03-01-20-17-57.jpg" draggable="false" />
         </div>
     </section>
-    <h1>
-        STORY
-    </h1>
     <div class="banner">
-        <div id="banner__first">
+        <div id="1" class="banner_visible banner__differentbanner__first ">
             <div class="text">
                 <h2>MAGAZZINO</h2>
                 <p>si trova a guidonia <br>
                     trasferiti dal 2022</p>
                 <div class="button">
-                    <button class="back"></button>
-                    <button class="next"></button>
                 </div>
             </div>
             <img src="Screenshot (44).png" alt="">
-
         </div>
-        <div id="banner__second">
+        <div id="2" class="banner__different">
             <div class="text">
-                <h2>MAGAZZINO</h2>
+                <h2>STORIA</h2>
                 <p>si trova a guidonia <br>
-                    trasferiti dal 2022</p>
+                    trasferiti dal 2023</p>
             </div>
             <img src="Screenshot (44).png" alt="">
-            <div class="button">
-                <button class="back"></button>
-                <button class="next"></button>
+        </div>
+        <div id="3" class="banner__different">
+            <div class="text">
+                <h2>SOCI</h2>
+                <p>si trova a guidonia <br>
+                    trasferiti dal 2023</p>
             </div>
+            <img src="Screenshot (44).png" alt="">
+        </div>
+
+        <div id="4" class="banner__different">
+            <div class="text">
+                <h2>PRIMO STEND</h2>
+                <p>si trova a guidonia <br>
+                    trasferiti dal 2023</p>
+            </div>
+            <img src="Screenshot (44).png" alt="">
+        </div>
+        <div id="5" class="banner__different">
+            <div class="text">
+                <h2>COVID</h2>
+                <p>si trova a guidonia <br>
+                    trasferiti dal 2023</p>
+            </div>
+            <img src="Screenshot (44).png" alt="">
+        </div>
+        <div class="button">
+            <button class="back" onclick="banner_behind()"></button>
+            <button class="next" onclick="banner_next()"></button>
         </div>
     </div>
     <footer class="clearfix">
@@ -152,6 +171,30 @@
     function remId(nome) {
         const tag = document.getElementById(nome);
         tag.classList.remove("visible");
+    }
+    function banner_next() {
+        const oldBanner = document.getElementsByClassName("banner_visible");
+        var number = oldBanner[0].id;
+        oldBanner[0].style.display = "none";
+        oldBanner[0].classList.remove("banner_visible");
+        number = Number(number);
+        if (number == 5) { number = 0; }
+        var newBanner = document.getElementById(number + 1);
+        newBanner.style.transition = "all 2s";
+        newBanner.style.display = "block";
+        newBanner.classList.add("banner_visible");
+    }
+    function banner_behind() {
+        const oldBanner = document.getElementsByClassName("banner_visible");
+        var number = oldBanner[0].id;
+        oldBanner[0].style.display = "none";
+        oldBanner[0].classList.remove("banner_visible");
+        number = Number(number);
+        if (number == 1) { number = 6; }
+        var newBanner = document.getElementById(number - 1);
+        newBanner.style.transition = "all 2s";
+        newBanner.style.display = "block";
+        newBanner.classList.add("banner_visible");
     }
 </script>
 
