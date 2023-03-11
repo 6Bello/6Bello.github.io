@@ -301,11 +301,10 @@ PARAGRAFI
 FOOTER
 ---------------------------------------------------*/
 footer {
-    background-image: url(footer.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: url(footer.png) no-repeat 40% center;
+    background-size: cover;
     background-position-y: bottom;
-    max-height: 200px;
+    height: 400px;
     width: 100vw;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -313,25 +312,36 @@ footer {
 
 footer>.logo_magazzino {
     width: 50vw;
-    float: left;
+    margin-left: 25px;
+    margin-top: 140px;
     display: block;
 }
 
-footer>.logo_magazzino>img {
-    width: 300px;
-    margin-top: 65px;
+footer>.logo_magazzino>#logo_slogan {
+    display: flex;
+    flex-direction: row;
+}
+
+footer>.logo_magazzino>#logo_slogan>#logo_slogan__logo {
+    background-size: cover;
+    width: 120px;
+    height: 100px;
     margin-bottom: 0px;
-    position: absolute;
+    text-align: center;
+}
+
+footer>.logo_magazzino>#logo_slogan>#logo_slogan__logo>img {
+    width: 100%;
 }
 
 footer>.logo_magazzino>.magazzino {
-    margin: 140px 0 0 35px;
+    margin: 20px 0 0 0px;
 }
 
 footer>.logo_magazzino>.designer {
     font-style: italic;
     font-weight: bold;
-    margin: 25px 0 100px 20px;
+    margin: 25px 0 100px 0px;
 }
 
 footer>.logo_magazzino>.designer>a {
@@ -344,7 +354,7 @@ footer>.informazioni {
     float: right;
     width: 50vw;
     color: rgb(208, 208, 208);
-    margin: 60px 0 0 90px;
+    margin: 140px 0 0 90px;
 
 }
 
