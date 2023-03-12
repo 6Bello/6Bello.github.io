@@ -67,7 +67,7 @@
         </div>
     </section>
     <div class="banner">
-        <div id="1" class="banner_visible banner__differentbanner__first ">
+        <div id="1" class="banner_visible banner_different banner__first ">
             <div class="text">
                 <h2>MAGAZZINO</h2>
                 <p>si trova a guidonia <br>
@@ -77,7 +77,7 @@
             </div>
             <img src="Screenshot (44).png" alt="">
         </div>
-        <div id="2" class="banner__different">
+        <div id="2" class="banner_different">
             <div class="text">
                 <h2>STORIA</h2>
                 <p>si trova a guidonia <br>
@@ -85,7 +85,7 @@
             </div>
             <img src="Screenshot (44).png" alt="">
         </div>
-        <div id="3" class="banner__different">
+        <div id="3" class="banner_different">
             <div class="text">
                 <h2>SOCI</h2>
                 <p>si trova a guidonia <br>
@@ -94,7 +94,7 @@
             <img src="Screenshot (44).png" alt="">
         </div>
 
-        <div id="4" class="banner__different">
+        <div id="4" class="banner_different">
             <div class="text">
                 <h2>PRIMO STEND</h2>
                 <p>si trova a guidonia <br>
@@ -102,7 +102,7 @@
             </div>
             <img src="Screenshot (44).png" alt="">
         </div>
-        <div id="5" class="banner__different">
+        <div id="5" class="banner_different">
             <div class="text">
                 <h2>COVID</h2>
                 <p>si trova a guidonia <br>
@@ -175,25 +175,19 @@
     function banner_next() {
         const oldBanner = document.getElementsByClassName("banner_visible");
         var number = oldBanner[0].id;
-        oldBanner[0].style.display = "none";
         oldBanner[0].classList.remove("banner_visible");
         number = Number(number);
         if (number == 5) { number = 0; }
         var newBanner = document.getElementById(number + 1);
-        newBanner.style.transition = "all 2s";
-        newBanner.style.display = "block";
         newBanner.classList.add("banner_visible");
     }
     function banner_behind() {
         const oldBanner = document.getElementsByClassName("banner_visible");
         var number = oldBanner[0].id;
-        oldBanner[0].style.display = "none";
         oldBanner[0].classList.remove("banner_visible");
         number = Number(number);
         if (number == 1) { number = 6; }
         var newBanner = document.getElementById(number - 1);
-        newBanner.style.transition = "all 2s";
-        newBanner.style.display = "block";
         newBanner.classList.add("banner_visible");
     }
 </script>
