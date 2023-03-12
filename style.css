@@ -283,6 +283,7 @@ BANNER
 
 .banner>.banner_visible {
     display: block;
+    animation: fadeIn 1s;
 }
 
 #banner__third {
