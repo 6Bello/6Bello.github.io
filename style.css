@@ -1,55 +1,23 @@
+/*COLOR PALETTE: https: //coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08*/
+
 body {
     margin: 0px;
-    background-color: rgb(0, 12, 26);
+    background-color: #03071e;
     overflow-X: hidden;
     position: absolute;
     z-index: -1;
 }
 
+/*-------------------------------------------------------
+HEADER
+-------------------------------------------------------*/
 header {
     background-color: transparent;
-    height: 8vw;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
+    height: 8vw;width: 100%;
+    position: fixed;z-index: 100;
 }
 
-#slogan {
-    height: 40vw;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    display: flex;
-    color: #f5f5f7;
-    background-color: rgb(0, 12, 26);
-    overflow: hidden;
-    display: block;
-}
 
-.slogan__text {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5vw;
-}
-
-#slogan__gradient {
-    position: absolute;
-    z-index: 2;
-    transform: matrix(1, 0, 0, 1, 0, -540);
-    mix-blend-mode: darken;
-    width: 110%;
-}
-
-#slogan__gradient>img {
-    width: 100%;
-    object-fit: cover;
-}
 
 header>#nav__company>#nav__circle {
     background: #fff;
@@ -145,32 +113,46 @@ header>ul>li:hover>a>.selecting {
     margin-right: -1.8vw;
 }
 
+/*----------------------------------------------
+SLOGAN
+----------------------------------------------*/
+#slogan__gradient {
+    position: absolute;z-index: 2;
+    width: 110%;
+    transform: matrix(1, 0, 0, 1, 0, -540);
+    mix-blend-mode: multiply;
+    
+}
+
+#slogan__gradient>img {width: 100%;object-fit: cover;}
+#slogan {
+    height: 40vw;
+    position: sticky;z-index: 1;top: 0px;
+    color: #f5f5f7;background-color: rgb(0, 12, 26);
+    overflow: hidden;display: block;  
+}
+.slogan__text {
+    display: flex;align-items: center;text-align: center;justify-content: center;
+    height: 100%;width: 100%;
+    margin: 0 auto;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 5vw;
+}
+
 /*----------------------------------------
 COVER
 ----------------------------------------*/
 .cover {
-    background-image: url('garm_stend.png');
-    background-size: 100%;
-    height: 48vw;
-    width: 100%;
-    vertical-align: middle;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
+    background-image: url('garm_stend.png');background-size: 100%;background-repeat: no-repeat;background-attachment: fixed;  
+    height: 48vw;width: 100%;
     position: relative;
-    display: flex;
-    margin: 0px;
-    padding: 0px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    display: flex;vertical-align: middle;justify-content: center;text-align: center;flex-direction: column;  
+    margin: 0px;padding: 0px; 
 }
 
 .cover__filter {
-    width: 100%;
-    height: 100%;
+    width: 100%;height: 100%;
     vertical-align: middle;
     background: linear-gradient(0deg, rgb(0, 12, 26) 0%, rgba(255, 255, 255, 0) 80%);
-    ;
 }
 
 .cover__content {
@@ -217,7 +199,7 @@ CARD
 BANNER
 ---------------------------------------------------*/
 .banner {
-    margin: 0 150px;
+    margin: 0 10vw;
     width: auto;
     min-width: 360px;
     height: 375px;
@@ -256,7 +238,8 @@ BANNER
 
 .banner>.button>.back {
     float: left;
-    background: url(back.png) no-repeat center center;
+    background: url(next.png) no-repeat center center;
+    transform: rotateZ(180deg);
     background-size: cover;
     width: 50px;
     height: 50px;
@@ -408,6 +391,9 @@ footer>.informazioni>.instagram>a>img {
     width: 70px;
 }
 
+/*----------------------------------------------
+under 1000px
+----------------------------------------------*/
 @media (max-width: 1000px) {
     .banner>.button {
         position: absolute;
