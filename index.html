@@ -16,14 +16,22 @@
         <a href="#" id="nav__company">
             <span id="nav__circle" onmouseenter="addId('nav__circle__logo__name')"
                 onmouseleave="remId('nav__circle__logo__name')">
+
                 <div class="nav__circle__logo">
                     <img id="nav__circle__logo__icon" src="logo.png" alt="nav__circle__logo">
                     <img id="nav__circle__logo__name" src="garm_nome.png" alt="nome">
                 </div>
             </span>
         </a>
-
-        <ul class="clearfix nav__list">
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="clearfix nav-list">
+            <li id="nav-list__logo""><img src=" garm_logo.png" alt="">
+                <hr>
+            </li>
             <li><a id="home" href="index.html">Home<img class="selecting" src="logo.png" alt="select"></a>
             </li>
             <li><a id="Contatti" href="contatti.html">Contatti<img class="selecting" src="logo.png" alt="select"></a>
@@ -155,7 +163,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="script/funcScroll.js"></script>
 <script src="script/banner.js"></script>
+<script src="script/hamburger-menu.js"></script>
 <script>
+
     function updateWidth() {
         viewport = document.querySelector("meta[name=viewport]");
         if (window.orientation == 90 || window.orientation == -90) {

@@ -13,7 +13,7 @@ HEADER
 -------------------------------------------------------*/
 header {
     background-color: transparent;
-    height: 8vw;width: 100%;
+    height: 8vw;min-height: 50px; width: 100%; 
     position: fixed;z-index: 100;
 }
 
@@ -26,8 +26,8 @@ header>#nav__company>#nav__circle {
     -moz-transition: width 1s ease-in-out;
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
-    width: 7.4vw;
-    height: 6.5vw;
+    width: 7.4vw; min-width: 46.2;
+    height: 6.5vw; min-height: 40.6px;
     /*70px*/
     display: block;
     float: left;
@@ -52,11 +52,11 @@ header>#nav__company>#nav__circle:hover {
     -o-transition: width 0.7s ease-in-out;
     transition: width 0.7s ease-in-out;
 
-    width: 20.4vw;
+    width: 20.4vw; 
 }
 
 header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__icon {
-    width: 6.5vw;
+    width: 6.5vw; min-width: 40.6px;
     margin-left: 0.5vw;
     margin-top: 0.7vw;
     position: absolute;
@@ -64,7 +64,7 @@ header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__icon {
 
 header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name {
     display: inline-block;
-    height: 3.7vw;
+    height: 3.7vw; min-height: 23.1px;
     margin-left: 7vw;
     margin-top: 1.2vw;
     position: absolute;
@@ -81,9 +81,19 @@ header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name.vi
     -moz-transition: width 1s ease-in-out;
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
-    width: 10.2vw;
+    width: 10.2vw; 
 }
-
+.hamburger-menu{
+    float: right;
+    padding: 20px;
+    display: none;
+}
+.hamburger-menu > span{
+    display: block;
+    width: 30px; height: 3px;
+    background: #000000;
+    margin-bottom: 5px;
+}
 ul {
     margin: 0px 0 0 45vw;
     padding: 2vw;
@@ -100,6 +110,14 @@ header>ul>li>a {
     color: rgb(0, 12, 26);
     font-size: 1.7vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#nav-list__logo{
+    display: none; width: 100%;
+}
+#nav-list__logo>img{
+      height: 25px;  
+      margin: 0 -12px;
+      display: block;
 }
 
 header>ul>li>a>.selecting {
@@ -395,6 +413,28 @@ footer>.informazioni>.instagram>a>img {
 under 1000px
 ----------------------------------------------*/
 @media (max-width: 1000px) {
+    .hamburger-menu{
+        display: block;
+    }
+    .nav-list{
+        width:60%; height: 0px;
+        overflow: hidden;
+        display: none;
+        float: left;
+        margin: 0 0 0 0;
+        position: absolute; top: 0px;
+        flex-direction: column;
+    }
+
+    .is-open{
+        height:100px;
+        overflow: auto;
+        background-color: #ffffff;
+        display: flex;
+    }  
+    #nav-list__logo{
+        display: block;
+    }
     .banner>.button {
         position: absolute;
         margin-top: 180px;
