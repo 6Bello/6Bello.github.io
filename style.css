@@ -374,6 +374,7 @@ footer>.informazioni {
 footer>.informazioni>* {
     float: left;
     margin-left: 5vw;
+    margin-right: 2px;
 }
 
 footer>.informazioni>*>h5 {
@@ -462,6 +463,23 @@ under 1000px
         position: absolute;
         top: 0;
         left: 0;
+    }
+}
+@media (max-width: 624px) {
+    .banner{
+        margin: 0 ;
+    }
+    header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name {
+    margin-left: 47px;
+    margin-top: 7.3;
+    }
+    footer>.informazioni>* {
+    display: none;
+    }
+    footer>.informazioni>.instagram {
+        width: 100%;
+        display: block;
+        transform: translateX(-50px);
     }
 }
 

@@ -28,7 +28,7 @@ function funcScroll() {
     nav.classList.remove("slideOutUp");
     nav.style.display = "block";
     circle.style.backgroundColor = "#eeeeee00";
-    name.style.width = "10.3vw";
+    name.style.width = "10.3vw"; name.style.minWidth = "63.7px";
     $(".animapulse").addClass('animated pulse');
     $(".animapulse").removeClass('animapulse');
   } else {
@@ -38,7 +38,7 @@ function funcScroll() {
     $(".pulse").addClass('animapulse');
     $(".animapulse").removeClass('animated pulse');
     circle.style.backgroundColor = "#fff";
-    name.style.width = "";
+    name.style.width = ""; name.style.minWidth = "";
   }
 
 }
