@@ -538,7 +538,7 @@ under 624px
         background-position-y: 30px;
     }
     #image-track>.image:hover {
-        transform: scale(0);
+        transform: scale(1);
     }
     footer>.informazioni>* {
         display: none;
