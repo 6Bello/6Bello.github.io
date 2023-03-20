@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact_style.css">
+    <link rel="icon" type="image/x-icon" href="logo - copia.png">
+    <title>GARM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+    <header class="clearfix content animapulse">
+        <div id="nav" class="animaslideInDown">
+        </div>
+        <a href="index.html" id="nav__company">
+            <span id="nav__circle" onmouseenter="addId('nav__circle__logo__name')" onmouseleave="remId('nav__circle__logo__name')">
+                <div class="nav__circle__logo">
+                    <img id="nav__circle__logo__icon" src="logo.png" alt="nav__circle__logo">
+                    <img id="nav__circle__logo__name" src="garm_nome.png" alt="nome">
+                </div>
+            </span>
+        </a>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-list">
+            <li id="nav-list__logo" "><img src=" garm_logo.png " alt=" ">
+                <hr>
+            </li>
+            <li><a id="home " href="index.html ">Home<img class="selecting " src="logo.png " alt="select "></a>
+            </li>
+            <li><a id="Contatti " href="contatct.html ">Contatti<img class="selecting " src="logo.png " alt="select "></a>
+            </li>
+            <li><a id="iNostriLavori " href="lavori.html ">I nostri lavori<img class="selecting " src="logo.png "
+                        alt="select "></a></li>
+            <li><a id="About " href="about.html ">About<img class="selecting " src="logo.png " alt="select "></a></li>
+            <li><a id="Collezioni " href="collezioni.html ">Collezioni<img class="selecting " src="logo.png "
+                        alt="select "></a></li>
+        </ul>
+    </header>
+      <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+         <table class="form-style">
+            <tr>
+               <td>
+                  <label>
+                     Your name <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <input type="text" name="name" class="long"/>
+                  <span class="error" id="errorname"></span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>
+                    Your email address <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <input type="email" name="email" class="long"/>
+                  <span class="error" id="erroremail"></span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <label>
+                     Message <span class="required">*</span>
+                  </label>
+               </td>
+               <td>
+                  <textarea name="message" class="long field-textarea"></textarea>
+                  <span class="error" id="errormsg"></span>
+               </td>
+            </tr>
+            <tr>
+               <td></td>
+               <td>
+                  <input type="submit" value="Send">      
+                  <input type="reset" value="Reset"> 
+               </td>
+            </tr>
+         </table>
+      </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js "></script>
+<script src="script/banner.js "></script>
+<script src="script/hamburger-menu.js "></script>
+<script>
+
+    function updateWidth() {
+        viewport = document.querySelector("meta[name=viewport] ");
+        if (window.orientation == 90 || window.orientation == -90) {
+            viewport.setAttribute('content', 'width=1401, initial-scale=0.34, maximum-scale=1.0, user-scalable=1');
+        }
+        else {
+            viewport.setAttribute('content', 'width=640, initial-scale=0.47, maximum-scale=1.0, user-scalable=1');
+        }
+    }
+    function addId(nome) {
+        const tag = document.getElementById(nome);
+        tag.classList.add("visible");
+    }
+    function remId(nome) {
+        const tag = document.getElementById(nome);
+        tag.classList.remove("visible");
+    }
+</script>
