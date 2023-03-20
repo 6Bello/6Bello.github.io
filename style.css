@@ -406,7 +406,8 @@ footer>.logo_magazzino>.magazzino {
 footer>.logo_magazzino>.designer {
     font-style: italic;
     font-weight: bold;
-    margin: 25px 0 100px 0px;
+    position: absolute;
+    bottom: 3px;
 }
 
 footer>.logo_magazzino>.designer>a {
