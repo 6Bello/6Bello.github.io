@@ -16,6 +16,7 @@ function funcScroll() {
   var slogan = document.getElementById("slogan");
   var slogan__gradientTop = (-slogan.getBoundingClientRect().top - 540) / (1400 / window.innerWidth);
   var nav = document.getElementById("nav");
+  var header = document.getElementsByClassName("header");
   var circle = document.getElementById("nav__circle");
   var name = document.getElementById("nav__circle__logo__name");
   slogan__gradient.style.transform = "matrix(1, 0, 0, 1, 0," + slogan__gradientTop + ")";
@@ -27,6 +28,7 @@ function funcScroll() {
     nav.classList.add("slideInDown");
     nav.classList.remove("slideOutUp");
     nav.style.display = "block";
+    header[0].style.zIndex = "100";
     circle.style.backgroundColor = "#eeeeee00";
     name.style.width = "10.3vw"; name.style.minWidth = "63.7px";
     $(".animapulse").addClass('animated pulse');
