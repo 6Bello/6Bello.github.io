@@ -21,6 +21,6 @@
   "search.showLineNumbers": true,
   "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.colorCustomizations": {},
-  "workbench.colorTheme": "codewithhanbal-updated-theme",
+  "workbench.colorTheme": "GitHub Dark",
   "zenMode.centerLayout": false,
 }
