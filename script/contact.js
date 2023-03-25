@@ -1,49 +1,27 @@
-function validateForm()                                    
-{ 
-    var name = document.forms["myForm"]["name"];               
-    var email = document.forms["myForm"]["email"];    
-    var message = document.forms["myForm"]["message"];   
-   
-    if (name.value == "")                                  
-    { 
-        document.getElementById('errorname').innerHTML="Please enter a valid name";  
-        name.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errorname').innerHTML="";  
+const form = document.getElementById('email-form');
+
+form.addEventListener('submit', function(event) {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  const data = {
+    name: name,
+    email: email,
+    message: message
+  };
+
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', form.action);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      alert('Messaggio inviato con successo!');
+    } else {
+      alert('Si è verificato un errore durante l\'invio del messaggio.');
     }
-       
-    if (email.value == "")                                   
-    { 
-        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
-        email.focus(); 
-        return false; 
-    }else{
-        document.getElementById('erroremail').innerHTML="";  
-    }
-   
-    if (email.value.indexOf("@", 0) < 0)                 
-    { 
-        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
-        email.focus(); 
-        return false; 
-    } 
-   
-    if (email.value.indexOf(".", 0) < 0)                 
-    { 
-        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
-        email.focus(); 
-        return false; 
-    } 
-   
-    if (message.value == "")                           
-    {
-        document.getElementById('errormsg').innerHTML="Please enter a valid message"; 
-        message.focus(); 
-        return false; 
-    }else{
-        document.getElementById('errormsg').innerHTML="";  
-    }
-   
-    return true; 
-}
+  };
+  xhr.send(JSON.stringify(data));
+
+  event.preventDefault();
+});

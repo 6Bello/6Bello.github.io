@@ -480,12 +480,16 @@ under 1000px
         margin: 0 0 0 0;
         position: absolute;
         top: 0px;
-        z-index: -2;
+        z-index: -1;
         flex-direction: column;
     }
 
     header>ul>li>a {
         font-size: larger;
+    }
+
+    header>ul>li>a>.selecting {
+        width: 20px;
     }
 
     .is-open {

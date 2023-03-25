@@ -16,32 +16,58 @@ function funcScroll() {
   var slogan = document.getElementById("slogan");
   var slogan__gradientTop = (-slogan.getBoundingClientRect().top - 540) / (1400 / window.innerWidth);
   var nav = document.getElementById("nav");
-  var header = document.getElementsByClassName("header");
   var circle = document.getElementById("nav__circle");
   var name = document.getElementById("nav__circle__logo__name");
   slogan__gradient.style.transform = "matrix(1, 0, 0, 1, 0," + slogan__gradientTop + ")";
-  if (slogan__gradientTop > -1100) {
-    if (slogan__gradientTop > -600) {
-      slogan.style.position = "relative";
+  console.log(slogan__gradientTop);
+  console.log(navigator.userAgent);
+    // EDGE
+  if (navigator.userAgent.indexOf("Mozilla") != -1 ) {
+    if (slogan__gradientTop > -850) {
+      if (slogan__gradientTop > -600) {
+        slogan.style.position = "relative";
+      }
+      nav.classList.add("animated");
+      nav.classList.add("slideInDown");
+      nav.classList.remove("slideOutUp");
+      nav.style.display = "block";
+      circle.style.backgroundColor = "#eeeeee00";
+      name.style.width = "10.3vw"; name.style.minWidth = "63.7px";
+      $(".animapulse").addClass('animated pulse');
+      $(".animapulse").removeClass('animapulse');
+    } else {
+      nav.classList.add("animated");
+      nav.classList.remove("slideInDown");
+      nav.classList.add("slideOutUp");
+      $(".pulse").addClass('animapulse');
+      $(".animapulse").removeClass('animated pulse');
+      circle.style.backgroundColor = "#fff";
+      name.style.width = ""; name.style.minWidth = "";
     }
-    nav.classList.add("animated");
-    nav.classList.add("slideInDown");
-    nav.classList.remove("slideOutUp");
-    nav.style.display = "block";
-    header[0].style.zIndex = "100";
-    circle.style.backgroundColor = "#eeeeee00";
-    name.style.width = "10.3vw"; name.style.minWidth = "63.7px";
-    $(".animapulse").addClass('animated pulse');
-    $(".animapulse").removeClass('animapulse');
-  } else {
-    nav.classList.add("animated");
-    nav.classList.remove("slideInDown");
-    nav.classList.add("slideOutUp");
-    $(".pulse").addClass('animapulse');
-    $(".animapulse").removeClass('animated pulse');
-    circle.style.backgroundColor = "#fff";
-    name.style.width = ""; name.style.minWidth = "";
+  } else{
+    if (slogan__gradientTop > -1100) {
+      if (slogan__gradientTop > -600) {
+        slogan.style.position = "relative";
+      }
+      nav.classList.add("animated");
+      nav.classList.add("slideInDown");
+      nav.classList.remove("slideOutUp");
+      circle.style.backgroundColor = "#eeeeee00";
+      name.style.width = "10.3vw"; name.style.minWidth = "63.7px";
+      $(".animapulse").addClass('animated pulse');
+      $(".animapulse").removeClass('animapulse');
+    } else {
+      nav.style.display = "block";
+      nav.classList.add("animated");
+      nav.classList.remove("slideInDown");
+      nav.classList.add("slideOutUp");
+      $(".pulse").addClass('animapulse');
+      $(".animapulse").removeClass('animated pulse');
+      circle.style.backgroundColor = "#fff";
+      name.style.width = ""; name.style.minWidth = "";
+    }
   }
+
 
 }
 
