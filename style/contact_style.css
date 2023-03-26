@@ -1,6 +1,4 @@
-*{
-  color: white;
-}
+
 body{
   width: 100%;
 }
@@ -17,14 +15,18 @@ body{
   background-image: none;
   background-color: #ff9500;
 }
+.cover *{
+  color: #000102;
+}
 .cover__filter{
   background: none;
   background: linear-gradient(0deg, #000102 0%, rgba(243, 243, 243, 0) 20%);
 
 }
 .cover__content{
-  margin: 12vw 18vw;
-  height: 24vw
+  margin: 12vw 10vw;
+  height: 24vw;
+  display: flex; justify-content: space-between;
 }
 .cover__content>div{
   position: relative;
@@ -33,12 +35,6 @@ body{
   transform: translateX(0) translateY(0);
   box-shadow: -10px 10px rgba(34, 34, 34, 0.371);
 }
-.cover__content__call{
-    float: left;    
-}
-.cover__content__chat{
-    position: relative; float: right;
-}
 .cover__content>div:hover{
     -webkit-transition: all 0.7s;
     box-shadow: -20px 20px rgba(34, 34, 34, 0.371);
@@ -46,9 +42,6 @@ body{
 }
 
 form {
-
-  background-color: orangered;
-  padding: 50px 50px;
   border-radius: 10%;
 }
 form {
@@ -57,7 +50,6 @@ form {
   width: 50%;
   margin: auto;
 }
-
 label {
   font-weight: bold;
   margin-top: 1rem;
@@ -65,14 +57,23 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="message"],
 textarea {
-  padding: 0.5rem;
+  padding: 0.25rem;
   margin-top: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 2px;
 }
-
+.message_text{
+  margin-top: 1rem ;
+}
+#message{
+  width: 90%; height: 30%;
+  display: flex;
+  margin: auto;
+}
 input[type="submit"] {
+  width: 90%;
   background-color: #4CAF50;
   color: white;
   padding: 0.5rem;
@@ -89,54 +90,56 @@ input[type="submit"] {
   height: 100%;
   backdrop-filter: blur(5px);
   position: absolute;
-  z-index: 2;
+  z-index: -1;
   top: 0;
   left: 0;
 }
 
-.bg__pink {
+.bg__up {
   position: absolute;
-  z-index: 1;
+  z-index: -2;
   top: 0%;
   left: 0%;
-  background-color: pink;
   -webkit-transition: all 0.5s;
-  height: 50%;
-  width: 100%;
+  height: 50%; width: 100%;
   opacity: 0.4;
 }
-
-.bg__purple {
-  background-color: purple;
-  height: 50%;
-  width: 100%;
+.bg__up>img {
+  opacity: 0;
+}.cover__content>div:hover>.bg__up>img {
+  opacity: 1;
+}
+.bg__down {
+  height: 50%;width: 100%;  
   -webkit-transition: all 0.5s;
   position: absolute;
-  z-index: 1;
+  z-index: -2;
   top: 50%;
   left: 0%;
   opacity: 0.4;
 }
 
-form:hover>.bg__pink {
+.cover__content>div:hover>.bg__up {
   -webkit-transition: all 0.7s;
-  top: -25%;
-  left: 65%;
+  top: -25%; left: 65%;
   border-radius: 50%;
   width: 70%;
   z-index: -1;
+  opacity: 1; background-color: #ffffff00 !important;
+  
 }
 
-form:hover>.bg__purple {
+.cover__content>div:hover>.bg__down {
   -webkit-transition: all 0.7s;
   border-radius: 50%;
   left: -40%;
   top: 75%;
   width: 70%;
   z-index: -1;
+  opacity: 1; background-color: #ffffff00;
 }
 
-form:hover>.blur {
+.cover__content>div:hover>.blur {
   -webkit-transition: all 0.7s;
   backdrop-filter: blur(0px);
   z-index: -1;

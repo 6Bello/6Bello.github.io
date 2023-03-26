@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact_style.css">
+    <link rel="style/stylesheet" href="style/style.css">
+    <link rel="style/stylesheet" href="style/contact_style.css">
     <link rel="icon" type="image/x-icon" href="logo - copia.png">
     <title>GARM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -48,10 +48,32 @@
                 <div class="cover__content__call">
                     <h1>Chiamaci</h1>
                     <p>chiamaci al numero +39832908</p>
+                    <div class="blur"></div>
+                     <div class="bg__up" style="background-color: green;"><img src="https://www.logolynx.com/images/logolynx/ea/ea9e24348d506bffb57001999442ca17.png" style=" margin: auto; height: 100%; " alt=""></div>
+                   <div class="bg__down"></div>
                 </div>
                 <div class="cover__content__chat">
                     <h1>Scrivici</h1>
                     <p>Scrivici al numero +39832908</p>
+                    <div class="blur"></div>
+                     <div class="bg__up" style="background-color: green;"><img src="https://freepngimg.com/thumb/whatsapp/77176-logo-whatsapp-computer-icons-free-transparent-image-hd.png" style=" margin: auto; height: 100%; " alt=""></div>
+                    <div class="bg__down"></div>
+                </div>
+                <div class="cover__content__email">
+                    <h1>Mandaci un email</h1>
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <div class="message_text">
+                            <label for="message">Messaggio:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <input type="submit" value="Invia">
+                        </form>  
                 </div>
             </div>
         </div>
@@ -68,18 +90,40 @@
         </div>
     </div>
          <!-- <form action="submit-form.php" method="POST" id="email-form">
-         <label for="name">Nome:</label>
-         <input type="text" id="name" name="name" required>
-
-         <label for="email">Email:</label>
-         <input type="email" id="email" name="email" required>
-
-         <label for="message">Messaggio:</label>
-         <textarea id="message" name="message" required></textarea>
-
-         <input type="submit" value="Invia">
-         </form>           
+         
       </div> -->
+    <footer class="clearfix">
+        <div class="logo_magazzino clearfix">
+            <div id="logo_slogan">
+                <div id="logo_slogan__logo"><img src="logo.png" alt=""></div>
+                <div>
+                    <p><strong>IDEALO <br> CONDIVIDILO <br> GUARDALO <br> DIVENTARE REALTÀ</strong></p>
+                </div>
+            </div>
+            <p class="magazzino">Via di vigna mangani 50 (Roma)</p>
+            <p class="designer">made by <a href="giuseppəlbamonte.com">giuseppəlbamonte</a></p>
+        </div>
+        <div class="informazioni clearfix">
+            <div class="contatti">
+                <h3>Contatti</h3>
+                <hr>
+                <a href="tel:+3496969524">numero di telefono</a><br>
+                <a href="mailto:garm@gmail.com">email</a><br>
+                <a href="instagram">instagram</a>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <hr>
+                <a href="about.html">About</a><br>
+                <a href="privacy.html">privacy</a>
+                <a href=""></a>
+            </div>
+            <div class="instagram">
+                <a href="instagram"><img src="instagram.png" alt="instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="script/funcScroll.js"></script>
