@@ -155,7 +155,7 @@ COVER
 ----------------------------------------*/
 
 .cover {
-    background-image: url('garm_stend.png');
+    background-image: url('../garm_stend.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -293,7 +293,7 @@ BANNER
 }
 
 .banner>.button>.next {
-    background: url(next.png) no-repeat center center;
+    background: url(../next.png) no-repeat center center;
     background-size: cover;
     width: 50px;
     height: 50px;
@@ -306,7 +306,7 @@ BANNER
 
 .banner>.button>.back {
     float: left;
-    background: url(next.png) no-repeat center center;
+    background: url(../next.png) no-repeat center center;
     transform: rotateZ(180deg);
     background-size: cover;
     width: 50px;
@@ -367,7 +367,7 @@ FOOTER
 ---------------------------------------------------*/
 
 footer {
-    background: url(footer.png) no-repeat 40% center;
+    background: url(../footer.png) no-repeat 40% center;
     background-size: cover;
     background-position-y: bottom;
     height: 400px;

@@ -1,0 +1,52 @@
+/* ! HEADER */
+header>#nav{
+  display: block !important;
+}
+header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name{
+  width: 10.2vw;
+}
+/* ! Cover */
+.cover{ 
+  text-align: center; padding:10px; margin:0px; min-height:600px; width:100%; 
+  display:flex; flex-direction:column; justify-content:center; 
+  background-position: center center; background-size:cover;
+  background-image: url(../GARM_img/PHOTO-2023-03-01-20-22-43.jpg);
+}
+.cover * {color:#fff}
+
+.cover__blur{
+  position: absolute; left: 0;
+  height: 100%; width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.988) 0%, rgba(255, 255, 255, 0) 100% ),no-repeat center center;
+}
+
+
+
+
+
+.works{
+}
+.works>div{
+  color: whitesmoke;
+  width: 100%; height: 30vw;
+  display: flex;
+  margin-top: 50px;
+  background-color: rgba(245, 245, 245, 0);
+}
+.works>:nth-child(even){
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  transform: translateX(200%) rotate(4deg);
+}
+.works>:nth-child(odd){
+  justify-content: flex-start;
+  flex-direction: row;
+  transform: translateX(-200%) rotate(4deg);
+}
+.works>div>.text{
+  float: left; width: fit-content;
+}
+.works>div>img{
+  height: 100%;
+  float: right;
+}
