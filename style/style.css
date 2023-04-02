@@ -42,6 +42,8 @@ header>#nav__company>#nav__circle {
     float: left;
     margin-top: 0.5vw;
     margin-left: 3vw;
+    position: absolute;
+    z-index: 10;
 }
 
 header>#nav {
@@ -95,9 +97,11 @@ header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name.vi
 }
 
 .hamburger-menu {
+    height: 100%;
     float: right;
-    padding: 20px;
+    margin: auto;
     display: none;
+    align-content: center;
 }
 
 .hamburger-menu>span {
@@ -468,7 +472,7 @@ under 1000px
 
 @media (max-width: 1000px) {
     .hamburger-menu {
-        display: block;
+        display: grid;
     }
 
     .nav-list {
@@ -477,9 +481,9 @@ under 1000px
         overflow: hidden;
         display: none;
         float: left;
-        margin: 0 0 0 0;
+        margin: 0 0 0 0; padding-top: 12vw; box-sizing: content-box;
         position: absolute;
-        top: 0px;
+        top: 0;
         z-index: -1;
         flex-direction: column;
     }

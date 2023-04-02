@@ -3,14 +3,25 @@ header>#nav{
   display: block !important;
 }
 header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name{
-  width: 10.2vw;
+  width: 10.3vw;
+  min-width: 63.7px;
 }
 /* ! Cover */
 .cover{ 
-  text-align: center; padding:10px; margin:0px; min-height:600px; width:100%; 
-  display:flex; flex-direction:column; justify-content:center; 
-  background-position: center center; background-size:cover;
-  background-image: url(../GARM_img/PHOTO-2023-03-01-20-22-43.jpg);
+    background-image: url(../GARM_img/PHOTO-2023-03-01-20-22-43.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 48vw;
+    width: 100%;
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
 }
 .cover * {color:#fff}
 
@@ -18,13 +29,6 @@ header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name{
   position: absolute; left: 0;
   height: 100%; width: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.988) 0%, rgba(255, 255, 255, 0) 100% ),no-repeat center center;
-}
-
-
-
-
-
-.works{
 }
 .works>div{
   color: whitesmoke;
@@ -45,6 +49,12 @@ header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name{
 }
 .works>div>.text{
   float: left; width: fit-content;
+}
+.works>div>.text>h2{
+  margin: 0px 10px;
+}
+.works>div>.text>p{
+  margin: 0px 10px;
 }
 .works>div>img{
   height: 100%;

@@ -1,3 +1,11 @@
+/* ! HEADER */
+header>#nav{
+  display: block !important;
+}
+header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name{
+  width: 10.3vw;
+  min-width: 63.7px;
+}
 
 body{
   width: 100%;
@@ -11,22 +19,17 @@ body{
   overflow-y: initial;
   overflow-x: visible;
 }
-.cover{
-  background-image: none;
-  background-color: #ff9500;
-}
-.cover *{
-  color: #000102;
-}
-.cover__filter{
-  background: none;
-  background: linear-gradient(0deg, #000102 0%, rgba(243, 243, 243, 0) 20%);
-
-}
 .cover__content{
-  margin: 12vw 10vw;
-  height: 24vw;
-  display: flex; justify-content: space-between;
+  margin: auto;
+  padding-top: 10vw;
+  display: flex; justify-content: space-around;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgb(255, 102, 0) 10%),no-repeat center center;
+}
+.cover__content__email>h1{
+  margin-bottom: 5px;
+}
+.cover__content__email>.message_text>label{
+  
 }
 .cover__content>div{
   position: relative;
@@ -66,20 +69,22 @@ textarea {
 }
 .message_text{
   margin-top: 1rem ;
+  text-align: center;
 }
 #message{
-  width: 90%; height: 30%;
+  width: 90%; height: 20%;
   display: flex;
-  margin: auto;
+  margin: 10px auto;
 }
 input[type="submit"] {
-  width: 90%;
+  width: 90%; 
   background-color: #4CAF50;
   color: white;
   padding: 0.5rem;
   border: none;
   border-radius: 5px;
-  margin-top: 1rem;
+  display: block;
+  margin: 1rem auto;
   cursor: pointer;
 }
 
@@ -93,6 +98,7 @@ input[type="submit"] {
   z-index: -1;
   top: 0;
   left: 0;
+  border-radius: 5px;
 }
 
 .bg__up {
@@ -103,6 +109,7 @@ input[type="submit"] {
   -webkit-transition: all 0.5s;
   height: 50%; width: 100%;
   opacity: 0.4;
+  border-radius: 5px;
 }
 .bg__up>img {
   opacity: 0;
@@ -117,6 +124,8 @@ input[type="submit"] {
   top: 50%;
   left: 0%;
   opacity: 0.4;
+  border-radius: 5px;
+
 }
 
 .cover__content>div:hover>.bg__up {
@@ -127,6 +136,11 @@ input[type="submit"] {
   z-index: -1;
   opacity: 1; background-color: #ffffff00 !important;
   
+}
+.cover__content>div:hover>.bg__up>img {
+height: 50% !important;
+position: absolute;
+top: 25%; left: 10%;
 }
 
 .cover__content>div:hover>.bg__down {
@@ -143,4 +157,37 @@ input[type="submit"] {
   -webkit-transition: all 0.7s;
   backdrop-filter: blur(0px);
   z-index: -1;
+}
+
+
+@media (max-width: 1151px) {
+  .cover__content{
+    height: auto;
+  }
+  .cover__content>div{
+    margin: 5vw auto;
+    width: 300px; height: 420px;   
+  }
+  .cover__content>:first-child{
+    margin-top: 100px;  
+  }
+}
+@media (max-width: 940px) {
+  .cover__content{
+    height: auto;
+  }
+  .cover__content>div{
+    margin: 5vw auto;
+    width: 230px; height: 380px;   
+  }
+}
+@media (max-width: 750px) {
+  .cover__content{
+    height: auto; display: block;
+    padding-bottom: 10%;
+  }
+  .cover__content>div{
+    margin: 5vw auto;
+    width: 300px; height: 420px;   
+  }
 }
