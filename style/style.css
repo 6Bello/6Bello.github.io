@@ -27,7 +27,7 @@ header {
 }
 
 header>#nav__company>#nav__circle {
-    background: #fff;
+    background: whitesmoke;
     border-radius: 50%;
     -webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
@@ -49,7 +49,7 @@ header>#nav__company>#nav__circle {
 header>#nav {
     height: 100%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: whitesmoke;
     display: none;
     position: absolute;
     top: 0;
@@ -112,7 +112,8 @@ header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name.vi
     margin-bottom: 5px;
 }
 
-ul {
+
+header>ul {
     margin: 0px 0 0 45vw;
     padding: 2vw;
     z-index: 10;
@@ -179,7 +180,7 @@ COVER
     width: 100%;
     height: 105%;
     vertical-align: middle;
-    background: linear-gradient(0deg, #000102 0%, rgba(255, 255, 255, 0) 80%);
+    background: linear-gradient(0deg, #000102 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .cover__content {
@@ -187,7 +188,7 @@ COVER
 }
 
 .cover * {
-    color: white;
+    color: whitesmoke;
 }
 
 
@@ -200,7 +201,7 @@ SLOGAN
     z-index: 2;
     width: 110%;
     transform: matrix(1, 0, 0, 1, 0, -540);
-    mix-blend-mode: multiply;
+    mix-blend-mode: darken;
 }
 
 #slogan__gradient>img {
@@ -229,6 +230,7 @@ SLOGAN
     margin: 0 auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5vw;
+    background-color: #000102;
 }
 
 
@@ -271,9 +273,11 @@ BANNER
 ---------------------------------------------------*/
 
 .banner {
-    margin: 0 10vw;
+    margin: 0 auto;
+    margin-top: 100px;
     width: auto;
     min-width: 360px;
+    max-width: 1100px;
     height: 375px;
     background: #fff;
     position: relative;
@@ -336,6 +340,10 @@ BANNER
     display: none;
 }
 
+.banner>.banner_different>.text {
+    padding: 20px 35px;
+}
+
 .banner>.banner_visible {
     display: block;
     animation: fadeIn 1s;
@@ -373,7 +381,6 @@ FOOTER
 footer {
     background: url(../footer.png) no-repeat 40% center;
     background-size: cover;
-    background-position-y: bottom;
     height: 400px;
     width: 100vw;
     display: flex;
@@ -435,7 +442,7 @@ footer>.informazioni>* {
 }
 
 footer>.informazioni>*>h5 {
-    color: white;
+    color: whitesmoke;
 }
 
 footer>.informazioni>*>a {
@@ -481,7 +488,9 @@ under 1000px
         overflow: hidden;
         display: none;
         float: left;
-        margin: 0 0 0 0; padding-top: 12vw; box-sizing: content-box;
+        margin: 0 0 0 0;
+        padding-top: 12vw;
+        box-sizing: content-box;
         position: absolute;
         top: 0;
         z-index: -1;
@@ -499,7 +508,7 @@ under 1000px
     .is-open {
         height: 100vh;
         overflow: auto;
-        background-color: #ffffff;
+        background-color: whitesmoke;
         display: flex;
     }
 
@@ -508,7 +517,6 @@ under 1000px
     }
 
     .banner {
-        margin: 0 auto;
         width: 56.7vw;
         height: 45vw;
     }
@@ -529,7 +537,7 @@ under 1000px
     .banner>*>.text {
         width: 100%;
         height: 100%;
-        color: #fff;
+        color: whitesmoke;
         background-color: #3232324f;
         position: absolute;
         z-index: 1;

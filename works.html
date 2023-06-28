@@ -54,41 +54,41 @@
             <h1>ECCO I NOSTRI LAVORI</h1>
         </div>
         <div class="works">
-            <div class="works__work">
-                <div class="text">
+            <div id="first" class="works__work">
+                <div id="first_text" class="text">
                     <h2>Tonin</h2>
                     <p>Eiusmod culpa aliqua duis nulla.Anim nulla veniam officia
                         occaecat irure magna do labore laborum
                         eiusmod.</p>
                 </div>
-                <img src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
+                <img id="first_image" src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
             </div>
-            <div class="works__work">
-                <div class="text">
+            <div class="second works__work">
+                <div id="second_text" class="text">
                     <h2>Tonin</h2>
                     <p>Eiusmod culpa aliqua duis nulla.Anim nulla veniam officia
                         occaecat irure magna do labore laborum
                         eiusmod.</p>
                 </div>
-                <img src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
+                <img id="second_image" src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
             </div>
-            <div class="works__work">
-                <div class="text">
+            <div id="third" class="works__work">
+                <div id="third_text" class="text">
                     <h2>Tonin</h2>
                     <p>Eiusmod culpa aliqua duis nulla.Anim nulla veniam officia
                         occaecat irure magna do labore laborum
                         eiusmod.</p>
                 </div>
-                <img src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
+                <img id="third_image" src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
             </div>
-            <div class="works__work">
-                <div class="text">
+            <div id="fourth" class="works__work">
+                <div id="fourth_text" class="text">
                     <h2>Tonin</h2>
                     <p>Eiusmod culpa aliqua duis nulla.Anim nulla veniam officia
                         occaecat irure magna do labore laborum
                         eiusmod.</p>
                 </div>
-                <img src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
+                <img id="fourth_image" src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" alt="TONIN">
             </div>
         </div>
     </section>
@@ -132,22 +132,53 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="script/hamburger-menu.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script>
-    let tl = gsap.timeline({
+    let firstWorkTl = gsap.timeline({
         // yes, we can add it to an entire timeline!
         scrollTrigger: {
-        trigger: ".works__work",
-        start: "top center", // when the top of the trigger hits the top of the viewport
+        endTrigger: "#first",
+        end: "center center", // when the top of the trigger hits the top of the viewport
+        scrub:true
         }
     });
     // add animations and labels to the timeline
-    let work=document.getElementsByClassName("works__work");
-    let i=0;
-    tl.addLabel("left")
-    .to(".works__work", {opacity: 1,x: "0%",  autoAlpha: 0.5, stagger: 1, duration:1, })
-    .to(".works__work", { rotation:-4, duration:0.25, })
-    .to(".works__work", { rotation:0,   duration:0.25, })
-    // .to(".works__first", {rotation: -4, duration: 0.2})
-    // .to(".works__first", {rotation: 0})
-    .addLabel("spin")
+    firstWorkTl.from("#first_text", {y:400, opacity:-1, ease: "expo"})
+   .from("#first_image", {x:-600, duration:0.5, ease:"expo"}, 0)
+
+   let secondWorkTl = gsap.timeline({
+        // yes, we can add it to an entire timeline!
+        scrollTrigger: {
+            trigger: ".second",
+            start: "50px bottom", // when the top of the trigger hits the top of the viewport
+        scrub:true
+        }
+    });
+    // add animations and labels to the timeline
+    secondWorkTl.from("#second_text", {y:400, opacity:0, duration: 1, ease: "expo"})
+   .from("#second_image", {x:600, duration:0.5, ease:"expo"}, 0)
+
+   let thirdWorkTl = gsap.timeline({
+        // yes, we can add it to an entire timeline!
+        scrollTrigger: {
+        trigger: "#third",
+        start: "center bottom", // when the top of the trigger hits the top of the viewport
+        scrub:true
+        }
+    });
+    // add animations and labels to the timeline
+    thirdWorkTl.from("#third_text", {y:400, opacity:0, duration: 1, ease: "expo"})
+   .from("#third_image", {x:-600, duration:1, ease:"expo"}, 0)
+
+   let fourthWorkTl = gsap.timeline({
+        // yes, we can add it to an entire timeline!
+        scrollTrigger: {
+        trigger: "#fourth",
+        start: "center bottom", // when the top of the trigger hits the top of the viewport
+        scrub:true
+        }
+    });
+    // add animations and labels to the timeline
+    fourthWorkTl.from("#fourth_text", {y:400, opacity:0, duration: 1, ease: "expo"})
+   .from("#fourth_image", {x:600, duration:1, ease:"expo"}, 0)
 </script>

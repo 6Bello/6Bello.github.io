@@ -1,62 +1,76 @@
 /* ! HEADER */
-header>#nav{
+header>#nav {
   display: block !important;
 }
-header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name{
+
+header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name {
   width: 10.3vw;
   min-width: 63.7px;
 }
-/* ! Cover */
-.cover{ 
-    background-image: url(../GARM_img/PHOTO-2023-03-01-20-22-43.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 48vw;
-    width: 100%;
-    position: relative;
-    display: flex;
-    vertical-align: middle;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-}
-.cover * {color:#fff}
 
-.cover__blur{
-  position: absolute; left: 0;
-  height: 100%; width: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.988) 0%, rgba(255, 255, 255, 0) 100% ),no-repeat center center;
+/* ! Cover */
+.cover {
+  background-image: url(../GARM_img/PHOTO-2023-03-01-20-22-43.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 48vw;
+  width: 100%;
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
 }
-.works>div{
+
+.cover * {
+  color: whitesmoke
+}
+
+.cover__blur {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.988) 0%, rgba(255, 255, 255, 0) 100%), no-repeat center center;
+}
+
+.works>div {
   color: whitesmoke;
-  width: 100%; height: 30vw;
+  width: 100%;
+  height: 30vw;
   display: flex;
   margin-top: 50px;
   background-color: rgba(245, 245, 245, 0);
 }
-.works>:nth-child(even){
+
+.works>:nth-child(even) {
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.works>:nth-child(odd) {
   justify-content: flex-end;
   flex-direction: row-reverse;
-  transform: translateX(200%) rotate(4deg);
 }
-.works>:nth-child(odd){
-  justify-content: flex-start;
-  flex-direction: row;
-  transform: translateX(-200%) rotate(4deg);
+
+.works>div>.text {
+  float: left;
+  width: fit-content;
 }
-.works>div>.text{
-  float: left; width: fit-content;
-}
-.works>div>.text>h2{
+
+.works>div>.text>h2 {
   margin: 0px 10px;
 }
-.works>div>.text>p{
+
+.works>div>.text>p {
   margin: 0px 10px;
 }
-.works>div>img{
+
+.works>div>img {
   height: 100%;
   float: right;
 }

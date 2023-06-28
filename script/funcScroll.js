@@ -14,16 +14,16 @@ function funcScroll() {
   }
   var slogan__gradient = document.getElementById("slogan__gradient");
   var slogan = document.getElementById("slogan");
-  var slogan__gradientTop = (-slogan.getBoundingClientRect().top - 540) / (1400 / window.innerWidth);
+  var slogan__gradientTop = (-slogan.getBoundingClientRect().top - 800) / (1400 / window.innerWidth);
   var nav = document.getElementById("nav");
   var circle = document.getElementById("nav__circle");
   var name = document.getElementById("nav__circle__logo__name");
   slogan__gradient.style.transform = "matrix(1, 0, 0, 1, 0," + slogan__gradientTop + ")";
   console.log(slogan__gradientTop);
   console.log(navigator.userAgent);
-    // EDGE
-  if (navigator.userAgent.indexOf("Mozilla") != -1 ) {
-    if (slogan__gradientTop > -850) {
+  // EDGE
+  if (!navigator.userAgent.includes('Chrome')) {
+    if (slogan__gradientTop > -100) {
       if (slogan__gradientTop > -600) {
         slogan.style.position = "relative";
       }
@@ -44,7 +44,7 @@ function funcScroll() {
       circle.style.backgroundColor = "#fff";
       name.style.width = ""; name.style.minWidth = "";
     }
-  } else{
+  } else {
     if (slogan__gradientTop > -1100) {
       if (slogan__gradientTop > -600) {
         slogan.style.position = "relative";

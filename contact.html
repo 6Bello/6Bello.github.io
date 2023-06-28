@@ -1,72 +1,103 @@
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="style/style.css">
-        <link rel="stylesheet" href="style/contact_style.css">
-        <link rel="icon" type="image/x-icon" href="logo - copia.png">
-        <title>GARM</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/contact_style.css">
+    <link rel="icon" type="image/x-icon" href="logo - copia.png">
+    <title>GARM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
             user-scalable=no">
-    </head>
+</head>
 
-    <body>
-        <header class="clearfix content animapulse">
-            <div id="nav" class="animaslideInDown">
-            </div>
-            <a href="index.html" id="nav__company">
-                <span id="nav__circle"
-                    onmouseenter="addId('nav__circle__logo__name')"
-                    onmouseleave="remId('nav__circle__logo__name')">
-                    <div class="nav__circle__logo">
-                        <img id="nav__circle__logo__icon" src="logo.png"
-                            alt="nav__circle__logo">
-                        <img id="nav__circle__logo__name" src="garm_nome.png"
-                            alt="nome">
-                    </div>
-                </span>
-            </a>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-list">
-                <li><a id="home " href="index.html ">Home<img class="selecting "
-                            src="logo.png " alt="select "></a>
-                </li>
-                <li><a id="Contatti " href="contatct.html ">Contatti<img
-                            class="selecting " src="logo.png " alt="select "></a>
-                </li>
-                <li><a id="iNostriLavori " href="works.html ">I nostri lavori<img
-                            class="selecting " src="logo.png "
-                            alt="select "></a></li>
-                <li><a id="About " href="about.html ">About<img class="selecting
+<body>
+    <header class="clearfix content animapulse">
+        <div id="nav" class="animaslideInDown">
+        </div>
+        <a href="index.html" id="nav__company">
+            <span id="nav__circle" onmouseenter="addId('nav__circle__logo__name')"
+                onmouseleave="remId('nav__circle__logo__name')">
+                <div class="nav__circle__logo">
+                    <img id="nav__circle__logo__icon" src="logo.png" alt="nav__circle__logo">
+                    <img id="nav__circle__logo__name" src="garm_nome.png" alt="nome">
+                </div>
+            </span>
+        </a>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-list">
+            <li><a id="home " href="index.html ">Home<img class="selecting " src="logo.png " alt="select "></a>
+            </li>
+            <li><a id="Contatti " href="contatct.html ">Contatti<img class="selecting " src="logo.png "
+                        alt="select "></a>
+            </li>
+            <li><a id="iNostriLavori " href="works.html ">I nostri lavori<img class="selecting " src="logo.png "
+                        alt="select "></a></li>
+            <li><a id="About " href="about.html ">About<img class="selecting
                             " src="logo.png " alt="select "></a></li>
-                <li><a id="Collezioni " href="collezioni.html ">Collezioni<img
-                            class="selecting " src="logo.png "
-                            alt="select "></a></li>
-            </ul>
-        </header>
-        <div class="cover__content">
+            <li><a id="Collezioni " href="collezioni.html ">Collezioni<img class="selecting " src="logo.png "
+                        alt="select "></a></li>
+        </ul>
+    </header>
+    <h1 style="width: 100%; margin-left: auto;">CONTATTI</h1>
+    <div class="cover__content">
+        <div class="cover__content__details">
+            <div class="manuela">
+                <h1>MANUELA</h1>
+                <h2></h2>
+            </div>
+            <div class="antonio">
+                <h1>ANTONIO</h1>
+                <h2></h2>
+            </div>
+            <div class="roberto">
+                <h1>ROBERTO</h1>
+            </div>
+        </div>
+        <script>
+            // Funzione per riordinare casualmente gli elementi all'interno di un elemento genitore
+            function shuffleChildren(parentElement) {
+                const children = Array.from(parentElement.children);
+
+                children.forEach(child => {
+                    parentElement.removeChild(child);
+                });
+
+                shuffleArray(children);
+
+                children.forEach(child => {
+                    parentElement.appendChild(child);
+                });
+            }
+
+            // Funzione per mescolare casualmente un array
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            // Esegui il codice dopo il caricamento della pagina
+            window.addEventListener('load', () => {
+                const coverContentDetails = document.querySelector('.cover__content__details');
+                shuffleChildren(coverContentDetails);
+            });
+        </script>
+        <div class="cover__content__details">
             <div class="cover__content__call">
                 <h1>Chiamaci</h1>
                 <p>chiamaci al numero +39832908</p>
                 <div class="blur"></div>
-                <div class="bg__up" style="background-color: green;"><img
-                        src="https://www.logolynx.com/images/logolynx/ea/ea9e24348d506bffb57001999442ca17.png"
-                        style=" margin: auto; height: 100%; " alt=""></div>
-                <div class="bg__down"></div>
             </div>
             <div class="cover__content__chat">
                 <h1>Scrivici</h1>
                 <p>Scrivici al numero +39832908</p>
                 <div class="blur"></div>
-                <div class="bg__up" style="background-color: green;"><img
-                        src="https://freepngimg.com/thumb/whatsapp/77176-logo-whatsapp-computer-icons-free-transparent-image-hd.png"
-                        style=" margin: auto; height: 100%; " alt=""></div>
-                <div class="bg__down"></div>
             </div>
             <div class="cover__content__email">
                 <h1>Mandaci un email</h1>
@@ -81,7 +112,8 @@
                 </div>
 
                 <input type="submit" value="Invia">
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     <!-- <form action="submit-form.php" method="POST" id="email-form">
