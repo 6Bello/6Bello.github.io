@@ -1,45 +1,35 @@
-const track = document.getElementById("image-track");
+const div = document.getElementById('image-track');
+let isDragging = false;
+let offsetX = 0;
 
-const handleOnDown = e => track.dataset.touchDownAt = e.clientX;
-
-const handleOnUp = () => {
-  track.dataset.touchDownAt = "0";
-  track.dataset.prevPercentage = track.dataset.percentage;
+const onDown = e => {
+  isDragging = true;
+  offsetX = e.clientX - div.getBoundingClientRect().left;
 }
 
-const handleOnMove = e => {
-  if (track.dataset.touchDownAt === "0") return;
+const onUp = () => {
+  isDragging = false;
+}
 
-  const mouseDelta = parseFloat(track.dataset.touchDownAt) - e.clientX,
-    maxDelta = window.innerWidth / 2;
+const onMove = e => {
+  if (isDragging) {
+    const x = e.clientX - offsetX;
 
-  const percentage = (mouseDelta / maxDelta) * -75,
-    nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-    nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 10), -75);
-
-  track.dataset.percentage = nextPercentage;
-
-  track.animate({
-    transform: `translate(${nextPercentage}vw, 0%)`
-  }, { duration: 1200, fill: "forwards" });
-
-  for (const image of track.getElementsByClassName("image")) {
-    image.animate({
-      objectPosition: `${75 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
+    // Imposta la posizione del div sulla posizione del mouse.
+    if (x >= 148 || x<=-2000) return;
+    else {
+      div.style.left = x + "px";
+    }
   }
 }
 
-/* -- Had to add extra lines for touch events -- */
+// Aggiungi gestori di eventi
+div.ontouchstart = e => onDown(e.touches[0]);
+div.ontouchend = e => onUp(e.touches[0]);
+div.ontouchmove = e => onMove(e.touches[0]);
 
-window.onmousedown = e => handleOnDown(e);
-
-window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-window.onmouseup = e => handleOnUp(e);
-
-window.ontouchend = e => handleOnUp(e.touches[0]);
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
+// Aggiungi gestori di eventi per mouse
+// Aggiungi gestori di eventi
+window.addEventListener('mouseup', onUp);
+div.addEventListener('mousedown', onDown);
+window.addEventListener('mousemove', onMove);

@@ -1,181 +1,263 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" type="image/x-icon" href="logo - copia.png">
-    <title>GARM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-</head>
-
-<body>
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
     <header class="clearfix content pulse header">
-        <div id="nav" class="animaslideInDown">
-        </div>
-        <a href="#" id="nav__company">
-            <span id="nav__circle" onmouseenter="addId('nav__circle__logo__name')"
-                onmouseleave="remId('nav__circle__logo__name')">
-                <div class="nav__circle__logo">
-                    <img id="nav__circle__logo__icon" src="logo.png" alt="nav__circle__logo">
-                    <img id="nav__circle__logo__name" src="garm_nome.png" alt="nome">
-                </div>
-            </span>
-        </a>
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-list">
-            <li><a id="home" href="index.html">Home<img class="selecting" src="logo.png" alt="select"></a>
-            </li>
-            <li><a id="Contatti" href="contact.html">Contatti<img class="selecting" src="logo.png" alt="select"></a>
-            </li>
-            <li><a id="iNostriLavori" href="works.html">I nostri lavori<img class="selecting" src="logo.png"
-                        alt="select"></a></li>
-            <li><a id="About" href="about.html">About<img class="selecting" src="logo.png" alt="select"></a></li>
-            <li><a id="Collezioni" href="collezioni.html">Collezioni<img class="selecting" src="logo.png"
-                        alt="select"></a></li>
-        </ul>
+      <div id="nav" class="nav" class="animaslideInDown"></div>
+      <a href="#" id="nav__company">
+        <span
+          id="nav__circle"
+          onmouseenter="addId('nav__circle__logo__name')"
+          onmouseleave="remId('nav__circle__logo__name')"
+        >
+          <div class="nav__circle__logo">
+            <img
+              id="nav__circle__logo__icon"
+              src="logo.png"
+              alt="nav__circle__logo"
+            />
+            <img id="nav__circle__logo__name" src="garm_nome.png" alt="nome" />
+          </div>
+        </span>
+      </a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a id="home" href="index.html"
+            >Home<img class="selecting" src="logo.png" alt="select"
+          /></a>
+        </li>
+        <li>
+          <a id="chi siamo" href="about.html"
+            >Chi siamo<img class="selecting" src="logo.png" alt="select"
+          /></a>
+        </li>
+        <li>
+          <a id="Contatti" href="contact.html"
+            >Contatti<img class="selecting" src="logo.png" alt="select"
+          /></a>
+        </li>
+        <li>
+          <a id="iNostriLavori" href="works.html"
+            >I nostri lavori<img class="selecting" src="logo.png" alt="select"
+          /></a>
+        </li>
+      </ul>
     </header>
+
     <section class="cover">
-        <div class="cover__filter">
-            <div class="cover__content">
-                <h1 style="font-size: 5rem;"> GARM</h1>
-            </div>
+      <div class="cover__filter">
+        <div class="cover__content">
+          <h1 style="font-size: 5rem">GARM</h1>
         </div>
+      </div>
     </section>
+
     <div id="slogan">
-        <p class="slogan__text">
-            METTIAMO IL 100%<br>
-            IN OGNI LAVORO<br>
-            PER SODDISFARE IL NOSTRO CLIENTE <br>
-            ED I SUOI.
-        </p>
-        <div id="slogan__gradient">
-            <img src="Screenshot (44).png" alt="">
-        </div>
+      <p class="slogan__text">
+        La Tua Visione, il Tuo Stile: </br> Realizziamo Stend Unici in Ogni Materiale, Adattati Esclusivamente alle Tue Esigenze.      </p>
+      <div id="slogan__gradient"></div>
     </div>
+
     <section class="card">
-        <div id="image-track" data-touch-at="0" data-prev-percentage="0">
-            <img class="image" src="GARM_img/PHOTO-2022-09-11-20-43-12.jpg" draggable="false" />
-            <img class="image" src="GARM_img/PHOTO-2022-09-11-20-43-18.jpg" draggable="false" />
-            <img class="image" src="GARM_img/PHOTO-2022-09-11-20-43-18(2).jpg" draggable="false" />
-            <img class="image" src="GARM_img/PHOTO-2022-09-11-20-43-19(1).jpg" draggable="false" />
-            <img class="image" src="GARM_img/PHOTO-2022-09-11-20-43-20(1).jpg" draggable="false" />
-            <img class="image" src="GARM_img/PHOTO-2023-03-01-20-17-56(1).jpg" draggable="false" />
-            <img class="image" src="GARM_img/PHOTO-2023-03-01-20-17-57.jpg" draggable="false" />
+      <div id="image-track" data-touch-at="0" data-prev-percentage="0">
+        <div class="image-container">
+          <img
+            class="image"
+            src="GARM_img/CISL.jpg"
+            draggable="false"
+          />
         </div>
+        <div class="image-container">
+          <img
+            class="image"
+            src="GARM_img/ipsen.jpg"
+            draggable="false"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            class="image"
+            src="GARM_img/recaro.jpg"
+            draggable="false"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            class="image"
+            src="GARM_img/vyxeos.jpg"
+            draggable="false"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            class="image"
+            src="GARM_img/ipsen2.jpg"
+            draggable="false"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            class="image"
+            src="GARM_img/kyowakiorin.jpg"
+            draggable="false"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            class="image"
+            src="GARM_img/ipsenDysport.jpg"
+            draggable="false"
+          />
+        </div>
+      </div>
     </section>
-    <div class="banner">
-        <div id="1" class="banner_visible banner_different banner__first ">
-            <div class="text">
-                <h2>CHI SIAMO</h2>
-                <p>L’AZIENDA NASCE DA 2 GIOVANI IMPRENDITORI CHE, LAVORANDO INIZIALMENTE
-                    ATTIVAMENTE NEL SETTORE IN QUALITA’ DI MONTATORI, HANNO POI DATO INIZIO A
-                    QUELLA CHE E’ OGGI L’AZIENDA.
-                    GRAZIE ANCHE AL SUBENTRO NEGLI ANNI DI ALTRI MEMBRI E COLLABORATORI CHE
-                    CONTRIBUISCONO A MANTENERE IL PRESTIGIO DELLA SOCIETA’.</p>
-                <div class="button">
-                </div>
-            </div>
-            <img src="R.jfif" alt="">
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__content__logo">
+          <img src="logo.png" alt="logo" />
+          <p>GARM</p>
         </div>
-        <div id="2" class="banner_different">
-            <div class="text">
-                <h2>ESPERIENZA</h2>
-                <p>VANTIAMO DI UN’ESPERIENZA PLURIDECENNALE SIA IN AMBITO NAZIONALE CHE
-                    INTERNAZIONALE E FORNIAMO PRODOTTI DI ELEVATA QUALITA’.
-                </p>
-            </div>
-            <img src="Screenshot (44).png" alt="">
+        <div class="footer__content__info">
+          <h3>Contatti</h3>
+          <p>Telefono:
+            <a href="tel: +39 077 470 50 93">+39 077 470 50 93</a>
+          </p>
+          <p>Email:
+            <a href="mailto: garmsrl4@gmail.com">garmsrl4@gmail.com </a>
+          </p>
+          <p>Indirizzo: Via della stazione 125 0010 Marcellina (Roma) Italia  </p>
         </div>
-        <div id="3" class="banner_different">
-            <div class="text">
-                <h2>SPECIALIZZATI IN</h2>
-                <ul style="text-align: left;">
-                    <li>PROGETTAZIONE, PRODUZIONE E MESSA IN OPERA DI STAND PERSONALIZZATI</li>
-                    <li>GRANDI SCENOGRAFIE CONGRESSUALI</li>
-                    <li>FIERE, CONGRESSI, EVENTI E MANIFESTAZIONI IN GENERE</li>
-                </ul>
-            </div>
-            <img src="Screenshot (44).png" alt="">
+        <div>
+          <a href="https://www.instagram.com/garmsrl4/" target="_blank" >
+            <img src="instagram.png" alt="instagram" />
+          </a>
         </div>
-
-        <div id="4" class="banner_different">
-            <div class="text">
-                <h2>FLESSIBILIT&#192</h2>
-                LA NOSTRA ELASTICITA’ OPERATIVA CI PERMETTE DI CURARE OGNI FASE
-                DELL’INTERA REALIZZAZIONE A 360° CON ESTREMA PRECISIONE E SERIETA’ PER
-                GARANTIRE LA MASSIMA CURA NEI DETTAGLI.
-            </div>
-            <img src="Screenshot (44).png" alt="">
-        </div>
-        <div class="button">
-            <button class="back" onclick="banner_behind()"></button>
-            <button class="next" onclick="banner_next()"></button>
-        </div>
-    </div>
-    <footer class="clearfix">
-        <div class="logo_magazzino clearfix">
-            <div id="logo_slogan">
-                <div id="logo_slogan__logo"><img src="logo.png" alt=""></div>
-                <div>
-                    <p><strong>IDEALO <br> CONDIVIDILO <br> GUARDALO <br> DIVENTARE REALTÀ</strong></p>
-                </div>
-            </div>
-            <p class="magazzino">Via di vigna mangani 50 (Roma)</p>
-            <p class="designer">made by <a href="giuseppəlbamonte.com">giuseppəlbamonte</a></p>
-        </div>
-        <div class="informazioni clearfix">
-            <div class="contatti">
-                <h3>Contatti</h3>
-                <hr>
-                <a href="tel:+3496969524">numero di telefono</a><br>
-                <a href="mailto:garm@gmail.com">email</a><br>
-                <a href="instagram">instagram</a>
-            </div>
-            <div class="pages">
-                <h3>Pages</h3>
-                <hr>
-                <a href="about.html">About</a><br>
-                <a href="privacy.html">privacy</a>
-                <a href=""></a>
-            </div>
-            <div class="instagram">
-                <a href="instagram"><img src="instagram.png" alt="instagram">
-                </a>
-            </div>
-        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2021 GARM. All rights reserved.</p>
+      </div>
     </footer>
-
-
-</body>
-<script src="script/script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="script/funcScroll.js"></script>
-<script src="script/banner.js"></script>
-<script src="script/hamburger-menu.js"></script>
-<script>
-
+  </body>
+  <style>
+    
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/EaselPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/PixiPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+  <script>
     function updateWidth() {
-        viewport = document.querySelector("meta[name=viewport]");
-        if (window.orientation == 90 || window.orientation == -90) {
-            viewport.setAttribute('content', 'width=1401, initial-scale=0.34, maximum-scale=1.0, user-scalable=1');
-        }
-        else {
-            viewport.setAttribute('content', 'width=640, initial-scale=0.47, maximum-scale=1.0, user-scalable=1');
-        }
+      viewport = document.querySelector("meta[name=viewport]");
+      if (window.orientation == 90 || window.orientation == -90) {
+        viewport.setAttribute(
+          "content",
+          "width=1401, initial-scale=0.34, maximum-scale=1.0, user-scalable=1"
+        );
+      } else {
+        viewport.setAttribute(
+          "content",
+          "width=640, initial-scale=0.47, maximum-scale=1.0, user-scalable=1"
+        );
+      }
     }
-    function addId(nome) {
-        const tag = document.getElementById(nome);
-        tag.classList.add("visible");
-    }
-    function remId(nome) {
-        const tag = document.getElementById(nome);
-        tag.classList.remove("visible");
-    }
-</script>
 
+    window.addEventListener("resize", updateGarmName);
+    function addId(id) {
+      document.getElementById(id).classList.add("visible");
+    }
+
+    function remId(id) {
+      document.getElementById(id).classList.remove("visible");
+    }
+  </script>
+
+  <script src="script/header.js"></script>
+  <script>
+    let tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#slogan",
+        start: "bottom bottom",
+        end: "bottom top",
+        scrub: true,
+        markers: true,
+        toggleActions: "restart retsart restart restart",
+      },
+    });
+
+    tl2.from("#slogan__gradient", {
+      background:
+        "linear-gradient(to bottom, rgb(2,0,36) 0%, rgb(170,0,0) 20%, rgb(230,135,0) 35%, rgb(207,255,0) 50%, rgb(255,132,0) 65%, rgb(170,0,0) 80%, rgb(0,0,0,1) 100%)",
+      duration: 1,
+      repeat: false,
+    });
+  </script>
+  <script src="script/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="script/hamburger-menu.js"></script>
+  <script>
+    //se una card viene toccata l'immagine va a tutto schermo e si opacizza il backgrond
+    //se viene toccata di nuovo l'immagine torna alla card e il background torna normale
+    //se viene toccato il background l'immagine torna alla card e il background torna normale
+    // const images = document.querySelectorAll(".image");
+    // const imageTrack = document.getElementById("image-track");
+
+    // const imagesTouchStart = (e) => {
+    //   const touch = e;
+    //   imageTrack.dataset.touchAt = touch.clientX;
+    //   imageTrack.dataset.prevPercentage = imageTrack.style.transform
+    //     .split("(")[1]
+    //     .split("%")[0];
+    // }
+
+    // const imagesTouchEnd = (e) => {
+    //   const touch = e;
+    //   const touchAt = imageTrack.dataset.touchAt;
+    //   const prevPercentage = imageTrack.dataset.prevPercentage;
+    //   const currentX = touch.clientX;
+    //   const percentage = (currentX - touchAt) / window.innerWidth;
+    //   const newPercentage = parseFloat(prevPercentage) + percentage * 100;
+    //   imageTrack.style.transform = `translateX(-${newPercentage}%)`;
+    // }
+
+    // images.forEach((image) => {
+    //   image.onTouchStart = e => imagesTouchStart(e.touches[0]);
+    //   window.onTouchEnd = e => imagesTouchEnd(e.touches[0]);
+    //   image.addEventListener("mousedown", imagesTouchStart);
+    //   window.addEventListener("mouseup", imagesTouchEnd);
+    // });
+    const imageTrack = document.getElementById("image-track");
+    const images = document.querySelectorAll(".image-container");
+
+    const toggleFullScreen = (clickedImage) => {
+      console.log(clickedImage);
+      images.forEach((image) => {
+        if (!clickedImage.classList.contains("full-screen")) {
+          clickedImage.classList.add("full-screen");
+          const imageOfClickedImage = clickedImage.firstElementChild;
+          imageOfClickedImage.classList.add("image_full-screen");
+        } else {
+          clickedImage.classList.remove("full-screen");
+          const imageOfClickedImage = clickedImage.firstElementChild;
+          imageOfClickedImage.classList.remove("image_full-screen");
+        }
+      });
+    };
+
+    images.forEach((image) => {
+      image.addEventListener("click", () => toggleFullScreen(image));
+    });
+  </script>
 </html>

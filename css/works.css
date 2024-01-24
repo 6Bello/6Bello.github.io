@@ -1,0 +1,50 @@
+/* ! HEADER */
+header>#nav {
+    display: block !important;
+  }
+  
+  header>#nav__company>#nav__circle>.nav__circle__logo>#nav__circle__logo__name {
+    width: 10.3vw;
+    min-width: 63.7px;
+  }
+  
+  .works>div {
+    color: whitesmoke;
+    width: 75%;
+    margin: auto;
+    height: 30vw;
+    display: flex;
+    margin-top: 50px;
+    background-color: rgba(245, 245, 245, 0);
+  }
+  
+  .works>:nth-child(even) {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  
+  .works>:nth-child(odd) {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+  
+  .works>div>.text {
+    float: left;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
+  }
+  
+  .works>div>.text>h2 {
+    font-size: 2.5em;
+    margin: 50px 50px;
+    font: 100 2.5em sans-serif;
+  }
+  
+  .works>div>img {
+    height: 100%;
+    float: right;
+  }
