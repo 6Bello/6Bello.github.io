@@ -158,33 +158,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/PixiPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
-  <script>
-    function updateWidth() {
-      viewport = document.querySelector("meta[name=viewport]");
-      if (window.orientation == 90 || window.orientation == -90) {
-        viewport.setAttribute(
-          "content",
-          "width=1401, initial-scale=0.34, maximum-scale=1.0, user-scalable=1"
-        );
-      } else {
-        viewport.setAttribute(
-          "content",
-          "width=640, initial-scale=0.47, maximum-scale=1.0, user-scalable=1"
-        );
-      }
-    }
 
-    window.addEventListener("resize", updateGarmName);
-    function addId(id) {
-      document.getElementById(id).classList.add("visible");
-    }
-
-    function remId(id) {
-      document.getElementById(id).classList.remove("visible");
-    }
-  </script>
-
-  <script src="script/header.js"></script>
   <script>
     let tl2 = gsap.timeline({
       scrollTrigger: {
@@ -196,68 +170,69 @@
         toggleActions: "restart retsart restart restart",
       },
     });
-
+    
     tl2.from("#slogan__gradient", {
       background:
-        "linear-gradient(to bottom, rgb(2,0,36) 0%, rgb(170,0,0) 20%, rgb(230,135,0) 35%, rgb(207,255,0) 50%, rgb(255,132,0) 65%, rgb(170,0,0) 80%, rgb(0,0,0,1) 100%)",
+      "linear-gradient(to bottom, rgb(2,0,36) 0%, rgb(170,0,0) 20%, rgb(230,135,0) 35%, rgb(207,255,0) 50%, rgb(255,132,0) 65%, rgb(170,0,0) 80%, rgb(0,0,0,1) 100%)",
       duration: 1,
       repeat: false,
     });
   </script>
-  <script src="script/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="script/hamburger-menu.js"></script>
   <script>
     //se una card viene toccata l'immagine va a tutto schermo e si opacizza il backgrond
     //se viene toccata di nuovo l'immagine torna alla card e il background torna normale
     //se viene toccato il background l'immagine torna alla card e il background torna normale
     // const images = document.querySelectorAll(".image");
     // const imageTrack = document.getElementById("image-track");
-
+    
     // const imagesTouchStart = (e) => {
-    //   const touch = e;
-    //   imageTrack.dataset.touchAt = touch.clientX;
-    //   imageTrack.dataset.prevPercentage = imageTrack.style.transform
-    //     .split("(")[1]
-    //     .split("%")[0];
-    // }
-
-    // const imagesTouchEnd = (e) => {
-    //   const touch = e;
-    //   const touchAt = imageTrack.dataset.touchAt;
-    //   const prevPercentage = imageTrack.dataset.prevPercentage;
-    //   const currentX = touch.clientX;
-    //   const percentage = (currentX - touchAt) / window.innerWidth;
-    //   const newPercentage = parseFloat(prevPercentage) + percentage * 100;
-    //   imageTrack.style.transform = `translateX(-${newPercentage}%)`;
-    // }
-
-    // images.forEach((image) => {
-    //   image.onTouchStart = e => imagesTouchStart(e.touches[0]);
-    //   window.onTouchEnd = e => imagesTouchEnd(e.touches[0]);
-    //   image.addEventListener("mousedown", imagesTouchStart);
-    //   window.addEventListener("mouseup", imagesTouchEnd);
-    // });
-    const imageTrack = document.getElementById("image-track");
-    const images = document.querySelectorAll(".image-container");
-
-    const toggleFullScreen = (clickedImage) => {
-      console.log(clickedImage);
-      images.forEach((image) => {
-        if (!clickedImage.classList.contains("full-screen")) {
-          clickedImage.classList.add("full-screen");
-          const imageOfClickedImage = clickedImage.firstElementChild;
-          imageOfClickedImage.classList.add("image_full-screen");
-        } else {
-          clickedImage.classList.remove("full-screen");
-          const imageOfClickedImage = clickedImage.firstElementChild;
-          imageOfClickedImage.classList.remove("image_full-screen");
-        }
-      });
-    };
-
-    images.forEach((image) => {
-      image.addEventListener("click", () => toggleFullScreen(image));
-    });
-  </script>
+      //   const touch = e;
+      //   imageTrack.dataset.touchAt = touch.clientX;
+      //   imageTrack.dataset.prevPercentage = imageTrack.style.transform
+      //     .split("(")[1]
+      //     .split("%")[0];
+      // }
+      
+      // const imagesTouchEnd = (e) => {
+        //   const touch = e;
+        //   const touchAt = imageTrack.dataset.touchAt;
+        //   const prevPercentage = imageTrack.dataset.prevPercentage;
+        //   const currentX = touch.clientX;
+        //   const percentage = (currentX - touchAt) / window.innerWidth;
+        //   const newPercentage = parseFloat(prevPercentage) + percentage * 100;
+        //   imageTrack.style.transform = `translateX(-${newPercentage}%)`;
+        // }
+        
+        // images.forEach((image) => {
+          //   image.onTouchStart = e => imagesTouchStart(e.touches[0]);
+          //   window.onTouchEnd = e => imagesTouchEnd(e.touches[0]);
+          //   image.addEventListener("mousedown", imagesTouchStart);
+          //   window.addEventListener("mouseup", imagesTouchEnd);
+          // });
+          const imageTrack = document.getElementById("image-track");
+          const images = document.querySelectorAll(".image-container");
+          
+          const toggleFullScreen = (clickedImage) => {
+            console.log(clickedImage);
+            images.forEach((image) => {
+              if (!clickedImage.classList.contains("full-screen")) {
+                clickedImage.classList.add("full-screen");
+                const imageOfClickedImage = clickedImage.firstElementChild;
+                imageOfClickedImage.classList.add("image_full-screen");
+              } else {
+                clickedImage.classList.remove("full-screen");
+                const imageOfClickedImage = clickedImage.firstElementChild;
+                imageOfClickedImage.classList.remove("image_full-screen");
+              }
+            });
+          };
+          
+          images.forEach((image) => {
+            image.addEventListener("click", () => toggleFullScreen(image));
+          });
+        </script>
+        <script src="script/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="script/hamburger-menu.js"></script>
+        <script src="script/idFunctions.js"></script>
 </html>
